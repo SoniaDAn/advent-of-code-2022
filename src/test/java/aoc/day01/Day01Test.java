@@ -33,4 +33,17 @@ public class Day01Test {
         // Then
         assertThat(result).isEqualTo(input.get(0));
     }
+
+    @Test
+    public void convertsToInt_convertsStringToInteger() {
+        // Given
+        String line = "1234";
+
+        // When
+        int result = new Day01().convertsToInt(line);
+
+        // Then
+        assertThat(result).isEqualTo(1234);
+    }
+
 }

@@ -20,4 +20,8 @@ public class Day01 extends Day {
         return input.isEmpty() ? "" : input.get(0);
     }
 
+    public int convertsToInt(String line) {
+       return Integer.parseInt(line);
+    }
+
 }
