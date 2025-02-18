@@ -14,11 +14,10 @@ public class Day01 extends Day {
     public String part1(List<String> input) {
         int runningTotal = 0;
 
-        for (int indexOfInput = 0; indexOfInput < input.size(); indexOfInput++) {
-            runningTotal += convertsToInt(input.get(indexOfInput));
+        for (String line : input) {
+            runningTotal += convertsToInt(line);
         }
         return String.valueOf(runningTotal);
-        //return input.isEmpty() ? "" : input.get(0);
     }
 
     @Override
