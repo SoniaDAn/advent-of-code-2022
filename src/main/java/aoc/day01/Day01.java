@@ -12,7 +12,9 @@ public class Day01 extends Day {
 
     @Override
     public String part1(List<String> input) {
-        return input.isEmpty() ? "" : input.get(0);
+        int addTwoNumbers = convertsToInt(input.get(0)) + convertsToInt(input.get(1));
+        return String.valueOf(addTwoNumbers);
+        //return input.isEmpty() ? "" : input.get(0);
     }
 
     @Override

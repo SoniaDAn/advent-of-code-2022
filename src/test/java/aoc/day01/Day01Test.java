@@ -11,18 +11,6 @@ import static org.assertj.core.api.Assertions.*;
 public class Day01Test {
 
     @Test
-    public void testPart1(){
-        // Given
-        List<String> input = Collections.singletonList("test");
-
-        // When
-        String result = new Day01().part1(input);
-
-        // Then
-        assertThat(result).isEqualTo(input.get(0));
-    }
-
-    @Test
     public void testPart2(){
         // Given
         List<String> input = Collections.singletonList("test");
@@ -44,6 +32,19 @@ public class Day01Test {
 
         // Then
         assertThat(result).isEqualTo(1234);
+    }
+
+    @Test
+    public void part1_addsTwoNumbers() {
+        // Given
+        String line1 = "20";
+        String line2 = "10";
+
+        // When
+        String result = new Day01().part1(List.of(line1, line2));
+
+        // Then
+        assertThat(result).isEqualTo("30");
     }
 
 }
