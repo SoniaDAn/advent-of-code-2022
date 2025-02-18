@@ -48,4 +48,19 @@ public class Day01Test {
         assertThat(result).isEqualTo("35");
     }
 
+    @Test
+    public void part1_outputsTotalWhenEmptyLineIsPresent() {
+        // Given
+        String line1 = "20";
+        String line2 = "10";
+        String line3 = "";
+        String line4 = "5";
+
+        // When
+        String result = new Day01().part1(List.of(line1, line2, line3, line4));
+
+        // Then
+        assertThat(result).isEqualTo("30");
+    }
+
 }

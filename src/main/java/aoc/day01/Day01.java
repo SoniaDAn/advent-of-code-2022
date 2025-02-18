@@ -15,6 +15,9 @@ public class Day01 extends Day {
         int runningTotal = 0;
 
         for (String line : input) {
+            if (line.isEmpty()) {
+                return String.valueOf(runningTotal);
+            }
             runningTotal += convertsToInt(line);
         }
         return String.valueOf(runningTotal);
