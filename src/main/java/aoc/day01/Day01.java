@@ -12,7 +12,12 @@ public class Day01 extends Day {
 
     @Override
     public String part1(List<String> input) {
-        return String.valueOf(convertsToInt(input.get(0)) + convertsToInt(input.get(1)));
+        int runningTotal = 0;
+
+        for (int indexOfInput = 0; indexOfInput < input.size(); indexOfInput++) {
+            runningTotal += convertsToInt(input.get(indexOfInput));
+        }
+        return String.valueOf(runningTotal);
         //return input.isEmpty() ? "" : input.get(0);
     }
 
