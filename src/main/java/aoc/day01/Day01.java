@@ -24,11 +24,9 @@ public class Day01 extends Day {
                     largestTotal = runningTotal;
                 }
                 } else {
-                    String.valueOf(runningTotal);
                     runningTotal = 0;
                 }
             }
-
         return String.valueOf(largestTotal);
     }
 

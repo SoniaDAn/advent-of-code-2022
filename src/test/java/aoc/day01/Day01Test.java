@@ -94,7 +94,7 @@ public class Day01Test {
    }
 
     @Test
-    public void part1_addsNumbersTotalsWhenLineIsEmptyAndOutputsLargestTotal() {
+    public void part1_doesAdditionAndTotalsAndOutputsLargestTotal() {
         // Given
         String line1 = "100";
         String line2 = "3";
