@@ -66,15 +66,31 @@ public class Day01Test {
     @Test
     public void part1_comparesTwoTotalsAndOutputsLarger() {
         // Given
-        String runningTotal = "100";
-        String space = "";
-        String largestTotal = "99";
+        String line1 = "99";
+        String line2 = "";
+        String line3 = "100";
 
         // When
-        String result = new Day01().part1(List.of(runningTotal, space, largestTotal));
+        String result = new Day01().part1(List.of(line1, line2, line3));
 
         // Then
         assertThat(result).isEqualTo("100");
     }
+
+    @Test
+    public void part1_comparesThreeTotalsAndOutputsLarger() {
+        // Given
+        String line1 = "100";
+        String line2 = "";
+        String line3 = "99";
+        String line4 = "";
+        String line5 = "110";
+
+        // When
+        String result = new Day01().part1(List.of(line1, line2, line3, line4, line5));
+
+        // Then
+        assertThat(result).isEqualTo("110");
+   }
 
 }

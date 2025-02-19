@@ -7,7 +7,8 @@ import java.util.List;
 public class Day01 extends Day {
 
     static {
-        currentDay = buildCurrentDay(new Object() {});
+        currentDay = buildCurrentDay(new Object() {
+        });
     }
 
     @Override
@@ -17,15 +18,27 @@ public class Day01 extends Day {
         int largestTotal = 0;
 
         for (String line : input) {
-            if (line.isEmpty()) {
-                return String.valueOf(runningTotal);
+            if (!line.isEmpty()) {
+
+//                String result = String.valueOf(runningTotal);
+//                int a = convertsToInt(result);
+//
+//                if (a > largestTotal) {
+//                    largestTotal = a;
+//                }
+
+
+                runningTotal += convertsToInt(line);
+                if (runningTotal > largestTotal) {
+                    largestTotal = runningTotal;
+                    runningTotal = 0;
+                } else {
+                    String.valueOf(runningTotal);
+                    runningTotal = 0;
+                }
             }
-            runningTotal += convertsToInt(line);
-            //largestTotal = runningTotal;
         }
-        if (runningTotal > largestTotal) {
-            largestTotal = runningTotal;
-        }
+
 
         return String.valueOf(largestTotal);
     }
@@ -36,7 +49,7 @@ public class Day01 extends Day {
     }
 
     public int convertsToInt(String line) {
-       return Integer.parseInt(line);
+        return Integer.parseInt(line);
     }
 
 }
