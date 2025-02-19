@@ -63,4 +63,18 @@ public class Day01Test {
         assertThat(result).isEqualTo("30");
     }
 
+    @Test
+    public void part1_comparesTwoTotalsAndOutputsLarger() {
+        // Given
+        String runningTotal = "100";
+        String space = "";
+        String largestTotal = "99";
+
+        // When
+        String result = new Day01().part1(List.of(runningTotal, space, largestTotal));
+
+        // Then
+        assertThat(result).isEqualTo("100");
+    }
+
 }

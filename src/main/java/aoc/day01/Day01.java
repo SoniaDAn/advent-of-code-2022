@@ -12,15 +12,22 @@ public class Day01 extends Day {
 
     @Override
     public String part1(List<String> input) {
+
         int runningTotal = 0;
+        int largestTotal = 0;
 
         for (String line : input) {
             if (line.isEmpty()) {
                 return String.valueOf(runningTotal);
             }
             runningTotal += convertsToInt(line);
+            //largestTotal = runningTotal;
         }
-        return String.valueOf(runningTotal);
+        if (runningTotal > largestTotal) {
+            largestTotal = runningTotal;
+        }
+
+        return String.valueOf(largestTotal);
     }
 
     @Override
