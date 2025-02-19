@@ -19,26 +19,15 @@ public class Day01 extends Day {
 
         for (String line : input) {
             if (!line.isEmpty()) {
-
-//                String result = String.valueOf(runningTotal);
-//                int a = convertsToInt(result);
-//
-//                if (a > largestTotal) {
-//                    largestTotal = a;
-//                }
                 runningTotal += convertsToInt(line);
-            } //runs whilst not empty. left with runningTotal
-
                 if (runningTotal > largestTotal) {
                     largestTotal = runningTotal;
-                    //runningTotal = 0;
+                }
                 } else {
                     String.valueOf(runningTotal);
                     runningTotal = 0;
                 }
             }
-
-
 
         return String.valueOf(largestTotal);
     }
