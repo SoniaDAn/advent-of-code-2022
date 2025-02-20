@@ -112,7 +112,7 @@ public class Day01Test {
     }
 
     @Test
-    public void addsTotalsToList_addsNumbersAndOutputsTotalsToNewList() {
+    public void part2_addsNumbersAndTotalsThreeLargest() {
         // Given
         String line1 = "100";
         String line2 = "3";
@@ -120,11 +120,16 @@ public class Day01Test {
         String line4 = "100";
         String line5 = "2";
         String line6 = "";
+        String line7 = "101";
+        String line8 = "";
+        String line9 = "100";
+        String line10 = "";
 
         // When
-        String result = new Day01().part1(List.of(line1, line2, line3, line4, line5, line6));
+        String result = new Day01().part2(List.of(line1, line2, line3, line4, line5, line6, line7, line8, line9, line10));
 
         // Then
-        assertThat(List.of(result)).containsExactlyInAnyOrder("103", "102");
+        //assertThat(List.of(result)).containsExactlyInAnyOrder("103", "102", "101");
+        assertThat(result).isEqualTo("306");
     }
 }
