@@ -3,6 +3,7 @@ package aoc.day01;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -110,4 +111,20 @@ public class Day01Test {
         assertThat(result).isEqualTo("103");
     }
 
+    @Test
+    public void addsTotalsToList_addsNumbersAndOutputsTotalsToNewList() {
+        // Given
+        String line1 = "100";
+        String line2 = "3";
+        String line3 = "";
+        String line4 = "100";
+        String line5 = "2";
+        String line6 = "";
+
+        // When
+        String result = new Day01().part1(List.of(line1, line2, line3, line4, line5, line6));
+
+        // Then
+        assertThat(List.of(result)).containsExactlyInAnyOrder("103", "102");
+    }
 }

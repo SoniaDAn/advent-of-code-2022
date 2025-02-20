@@ -2,6 +2,7 @@ package aoc.day01;
 
 import aoc.Day;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Day01 extends Day {
@@ -39,4 +40,20 @@ public class Day01 extends Day {
         return Integer.parseInt(line);
     }
 
+    public List<String> addsTotalsToList(List<String> input) {
+
+        int runningTotal = 0;
+
+        List<String> totals = new ArrayList<>();
+
+        for (String line : input) {
+            if (!line.isEmpty()) {
+                runningTotal += convertsToInt(line);
+            } else {
+                totals.add(String.valueOf(runningTotal));
+                runningTotal = 0;
+            }
+        }
+        return totals;
+    }
 }
