@@ -129,7 +129,6 @@ public class Day01Test {
         String result = new Day01().part2(List.of(line1, line2, line3, line4, line5, line6, line7, line8, line9, line10));
 
         // Then
-        //assertThat(List.of(result)).containsExactlyInAnyOrder("103", "102", "101");
         assertThat(result).isEqualTo("306");
     }
 }

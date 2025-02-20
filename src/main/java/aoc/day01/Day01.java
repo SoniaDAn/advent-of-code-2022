@@ -19,16 +19,16 @@ public class Day01 extends Day {
         int runningTotal = 0;
         int largestTotal = 0;
 
-        for (String line : input) {
-            if (!line.isEmpty()) {
-                runningTotal += convertsToInt(line);
+        for (String value : input) {
+            if (!value.isEmpty()) {
+                runningTotal += convertsToInt(value);
                 if (runningTotal > largestTotal) {
                     largestTotal = runningTotal;
                 }
-                } else {
-                    runningTotal = 0;
-                }
+            } else {
+                runningTotal = 0;
             }
+        }
         return String.valueOf(largestTotal);
     }
 
@@ -38,21 +38,21 @@ public class Day01 extends Day {
 
         List<Integer> totals = new ArrayList<>();
 
-        for (String line : input) {
-            if (!line.isEmpty()) {
-                runningTotal += convertsToInt(line);
+        for (String value : input) {
+            if (!value.isEmpty()) {
+                runningTotal += convertsToInt(value);
             } else {
                 totals.add(runningTotal);
                 runningTotal = 0;
             }
         }
+
         totals.sort(Collections.reverseOrder());
         int sum = 0;
 
-        for (int i = 0; i < 3; i++) {
-            sum += totals.get(i);
+        for (int numbers = 0; numbers < 3; numbers++) {
+            sum += totals.get(numbers);
         }
-
         return String.valueOf(sum);
     }
 
