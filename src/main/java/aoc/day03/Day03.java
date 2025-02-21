@@ -20,5 +20,9 @@ public class Day03 extends Day {
     public String firstHalfofString(String input) {
        return input.substring(0, (input.length()/2));
     }
+
+    public String secondHalfOfString(String input) {
+        return input.substring(input.length()/2);
+    }
 }
 

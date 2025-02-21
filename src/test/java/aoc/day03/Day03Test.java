@@ -15,7 +15,7 @@ class Day03Test {
     }
 
     @Test
-    void splitStringInHalf_dividesStringInTwo() {
+    void firstHalfOfString_returnsFirstHalf() {
         // Given
         String line = "vJrwpWtwJgWrhcsFMMfFFhFp";
 
@@ -24,8 +24,18 @@ class Day03Test {
 
         // Then
         assertThat(result).isEqualTo("vJrwpWtwJgWr");
+    }
 
+    @Test
+    void secondHalfOfString_returnsSecondHalf() {
+        // Given
+        String line = "vJrwpWtwJgWrhcsFMMfFFhFp";
 
+        // When
+        String result = new Day03().secondHalfOfString(line);
+
+        // Then
+        assertThat(result).isEqualTo("hcsFMMfFFhFp");
     }
 
 
