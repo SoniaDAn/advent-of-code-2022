@@ -17,11 +17,11 @@ public class Day03 extends Day {
         return "";
     }
 
-    public String firstHalfofString(String input) {
+    public String firstHalf(String input) {
        return input.substring(0, (input.length()/2));
     }
 
-    public String secondHalfOfString(String input) {
+    public String secondHalf(String input) {
         return input.substring(input.length()/2);
     }
 }

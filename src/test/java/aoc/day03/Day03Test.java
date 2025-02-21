@@ -1,12 +1,9 @@
 package aoc.day03;
 
-import aoc.day02.Day02;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+
 
 class Day03Test {
 
@@ -15,24 +12,24 @@ class Day03Test {
     }
 
     @Test
-    void firstHalfOfString_returnsFirstHalf() {
+    void firstHalf_returnsFirstHalfOfString() {
         // Given
         String line = "vJrwpWtwJgWrhcsFMMfFFhFp";
 
         // When
-        String result = new Day03().firstHalfofString(line);
+        String result = new Day03().firstHalf(line);
 
         // Then
         assertThat(result).isEqualTo("vJrwpWtwJgWr");
     }
 
     @Test
-    void secondHalfOfString_returnsSecondHalf() {
+    void secondHalf_returnsSecondHalfOfString() {
         // Given
         String line = "vJrwpWtwJgWrhcsFMMfFFhFp";
 
         // When
-        String result = new Day03().secondHalfOfString(line);
+        String result = new Day03().secondHalf(line);
 
         // Then
         assertThat(result).isEqualTo("hcsFMMfFFhFp");
