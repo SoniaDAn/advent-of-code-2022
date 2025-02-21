@@ -38,6 +38,29 @@ public class Day02 extends Day {
 
     @Override
     public String part2(List<String> input) {
-        return "";
+        int playerTwoTotal = 0;
+        for (String value : input) {
+            switch (value) {
+                case "A X" -> playerTwoTotal +=
+                    3;
+                case "B X" -> playerTwoTotal +=
+                    1;
+                case "C X" -> playerTwoTotal +=
+                    2;
+                case "A Y" -> playerTwoTotal +=
+                    4;
+                case "B Y" -> playerTwoTotal +=
+                    5;
+                case "C Y" -> playerTwoTotal +=
+                    6;
+                case "A Z" -> playerTwoTotal +=
+                    8;
+                case "B Z" -> playerTwoTotal +=
+                    9;
+                case "C Z" -> playerTwoTotal +=
+                    7;
+            }
+        }
+        return String.valueOf(playerTwoTotal);
     }
 }
