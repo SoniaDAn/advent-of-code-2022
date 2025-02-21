@@ -12,24 +12,25 @@ public class Day02 extends Day {
     public String part1(List<String> input) {
         int playerTwoTotal = 0;
         for (String value : input) {
-            if (value.equals("A X")) {
-                playerTwoTotal += 4;
-            } else if (value.equals("B X")) {
-                playerTwoTotal += 1;
-            } else if (value.equals("C X")) {
-                playerTwoTotal += 7;
-            } else if (value.equals("A Y")) {
-                playerTwoTotal += 8;
-            } else if (value.equals("B Y")) {
-                playerTwoTotal += 5;
-            } else if (value.equals("C Y")) {
-                playerTwoTotal += 2;
-            } else if (value.equals("A Z")) {
-                playerTwoTotal += 3;
-            } else if (value.equals("B Z")) {
-                playerTwoTotal += 9;
-            } else if (value.equals("C Z")) {
-                playerTwoTotal += 6;
+            switch (value) {
+                case "A X" -> playerTwoTotal +=
+                    4;
+                case "B X" -> playerTwoTotal +=
+                    1;
+                case "C X" -> playerTwoTotal +=
+                    7;
+                case "A Y" -> playerTwoTotal +=
+                    8;
+                case "B Y" -> playerTwoTotal +=
+                    5;
+                case "C Y" -> playerTwoTotal +=
+                    2;
+                case "A Z" -> playerTwoTotal +=
+                    3;
+                case "B Z" -> playerTwoTotal +=
+                    9;
+                case "C Z" -> playerTwoTotal +=
+                    6;
             }
         }
         return String.valueOf(playerTwoTotal);
