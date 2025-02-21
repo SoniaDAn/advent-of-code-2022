@@ -21,7 +21,7 @@ class Day02Test {
         assertThat(result).isEqualTo("4");
     }
 
-   @Test
+    @Test
     public void part1_scoreTwoIfPlayerTwoRockPlayerOnePaper() {
         // Given
         String line = "B X";
@@ -47,6 +47,14 @@ class Day02Test {
 
 
     @Test
-    void part2() {
+    void part2_scoreThreeIfPlayerTwoLosesPlayerOneRock() {
+            // Given
+            String line = "A X";
+
+            // When
+            String result = new Day02().part2(List.of(line));
+
+            // Then
+            assertThat(result).isEqualTo("3");
     }
 }
